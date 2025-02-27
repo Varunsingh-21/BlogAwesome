@@ -75,13 +75,13 @@ module.exports=function(eleventyConfig){
 // FETCH LIMIT CHANGED IN STRAPI
   async function fetchStrapiData() {
     try{
-      // const STRAPI_BEARER_1 =process.env.STRAPI_BEARER_1
+      const BEARER_1=process.env.BEARER_1;
       // http://localhost:1337/api/mycollections?filters[type][$eq]=lion
       const r =await fetch("https://cdn.contentful.com/spaces/kscoxmtenzwm/environments/master/entries?content_type=mycollection&order=sys.createdAt", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer 2GyvQjwGi7pj-NY7qHRtxzQAZ97w3JUunYfBkjp6b0Q`
+          "Authorization": `Bearer ${BEARER_1}`
         },
       })
         const data= await r.json();
@@ -136,12 +136,12 @@ module.exports=function(eleventyConfig){
 
   eleventyConfig.addGlobalData("strapi_posts", async () =>{
     try{
-      // const STRAPI_BEARER_2=process.env.STRAPI_BEARER_2
+      const BEARER_1=process.env.BEARER_1;
       // const STRAPI_BEARER_2="2GyvQjwGi7pj-NY7qHRtxzQAZ97w3JUunYfBkjp6b0Q";
       const r =await fetch("https://cdn.contentful.com/spaces/kscoxmtenzwm/environments/master/entries?content_type=writeups&order=sys.createdAt",{ method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "Authorization":`Bearer 2GyvQjwGi7pj-NY7qHRtxzQAZ97w3JUunYfBkjp6b0Q`
+          "Authorization":`Bearer ${BEARER_1}`
         },})
         console.log("Fetched writeups for the Projects");
         const data= await r.json();
