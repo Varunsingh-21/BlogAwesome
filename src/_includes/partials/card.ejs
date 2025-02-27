@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/card.css">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" height="200vh" src="<%= item.image %>" alt="Card image cap">
+  <div class="card-body">
+      <h5 class="card-title">Name: <%= item.name %></h5>
+      <p class="card-text">Description: <%= item.desc %></p>
+      <div class="button-container">
+          <a href="/posts/<%= item.name.replace(/[^a-z0-9]+/gi, '-').toLowerCase() %>/" class="btn btn-primary">View More</a>
+          <a href=<%= item.github %> target="_blank" class="btn btn-dark">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" height="20" style="margin-right: 5px;">
+              GitHub
+          </a>
+      </div>
+  </div>
+</div>

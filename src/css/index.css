@@ -1,0 +1,48 @@
+
+.varun{
+    color: rgb(0, 0, 0);
+    /* background-color: rgb(176, 199, 194); */
+    background:linear-gradient(to right, #eef2f3 0%, #8e9eab 100%);
+}
+
+body > div > nav > div {
+    max-width: 100%; 
+  }
+  body > div > nav > div > ol {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+body > div > div > div.col-lg-4.offset-lg-1.p-0.overflow-hidden.shadow-lg > img{
+  height: 70vh;
+  width: 100%;
+
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+
+  margin-top: auto;
+}
+
+
+.transparent-box {
+  background-color: rgb(176, 199, 194); /* Slightly transparent box for contrast */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.hero {
+  background-color: rgb(176, 199, 194); 
+  padding: 40px/* Matching background for the hero section */
+}
+.card {
+  background-color: rgb(176, 199, 194); /* Cards with slight contrast for readability */
+  border: none;
+  border-radius: 10px;}
